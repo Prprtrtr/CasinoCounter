@@ -1,0 +1,124 @@
+:root {
+    --color-meg: #9c27b0;
+    --color-liam: #2196f3;
+    --color-danger: #f44336;
+    --color-text: #333;
+    --color-bg: #f4f4f4;
+    --color-white: #fff;
+    --border-radius: 8px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--color-bg);
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    background: var(--color-white);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.player {
+    text-align: center;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    width: 45%;
+}
+
+#meg { background: rgba(156, 39, 176, 0.1); }
+#liam { background: rgba(33, 150, 243, 0.1); }
+
+h2 { margin: 0 0 10px; }
+.player p {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.score-history {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #666;
+    min-height: 20px;
+}
+
+.bonuses {
+    margin: 25px 0;
+}
+
+.bonus-group {
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.aces {
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    padding: 15px;
+    padding-top: 8px;
+    margin: 15px 0;
+}
+
+.aces::before {
+    content: "Aces (+1 per)";
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background: white;
+    padding: 0 5px;
+    font-size: 0.9em;
+}
+
+.aces label {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.aces input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: var(--border-radius);
+    background: var(--color-meg);
+    color: white;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn-danger {
+    background: var(--color-danger);
+}
+
+.winner-message {
+    color: var(--color-meg);
+    text-align: center;
+    margin-top: 20px;
+    display: none;
+}
+
+.actions {
+    margin-top: 20px;
+}

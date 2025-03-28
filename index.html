@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meg vs Liam Casino</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Meg vs Liam Casino</h1>
+        
+        <section class="scoreboard">
+            <div class="player" id="meg">
+                <h2>Meg</h2>
+                <p id="megScore" aria-live="polite">0</p>
+                <div class="score-history" id="megHistory"></div>
+            </div>
+
+            <div class="player" id="liam">
+                <h2>Liam</h2>
+                <p id="liamScore" aria-live="polite">0</p>
+                <div class="score-history" id="liamHistory"></div>
+            </div>
+        </section>
+
+        <section class="bonuses">
+            <h3>Round Bonuses</h3>
+            <fieldset class="bonus-group">
+                <legend>Most Cards (+3)</legend>
+                <label><input type="radio" name="mostCards" value="meg"> Meg</label>
+                <label><input type="radio" name="mostCards" value="liam"> Liam</label>
+            </fieldset>
+
+            <fieldset class="bonus-group">
+                <legend>Most Spades (+1)</legend>
+                <label><input type="radio" name="mostSpades" value="meg"> Meg</label>
+                <label><input type="radio" name="mostSpades" value="liam"> Liam</label>
+            </fieldset>
+
+            <fieldset class="bonus-group">
+                <legend>Big Casino (10♦) (+2)</legend>
+                <label><input type="radio" name="bigCasino" value="meg"> Meg</label>
+                <label><input type="radio" name="bigCasino" value="liam"> Liam</label>
+            </fieldset>
+
+            <fieldset class="bonus-group">
+                <legend>Small Casino (2♠) (+1)</legend>
+                <label><input type="radio" name="smallCasino" value="meg"> Meg</label>
+                <label><input type="radio" name="smallCasino" value="liam"> Liam</label>
+            </fieldset>
+
+            <div class="aces">
+                <label>
+                    <input type="number" id="megAces" placeholder="Meg" min="0"> (Meg)
+                    <input type="number" id="liamAces" placeholder="Liam" min="0"> (Liam)
+                </label>
+            </div>
+        </section>
+
+        <div class="actions">
+            <button id="scoreRound" class="btn">Score Round</button>
+            <button id="reset" class="btn btn-danger">Reset Game</button>
+        </div>
+
+        <h2 id="winner" class="winner-message" aria-live="polite"></h2>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
